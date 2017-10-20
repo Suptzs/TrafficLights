@@ -3,7 +3,7 @@ Test
 ---
 !2 Valid combinations
 
-!|FirstLightSwitchingCrossingController              |
+!|FirstLightSwitchingCrossingController             |
 |first light|second light|first light?|second light?|
 |Green      |Red         |Yellow      |Red          |
 |Yellow     |Red         |Red         |Red          |
@@ -12,21 +12,30 @@ Test
 
 !2 Invalid combinations
 
-!|FirstLightSwitchingCrossingController|
-|first light|second light|first light?|second light?|
-|Green      |Red, Yellow |Yellow blink|Yellow blink |
-|Green      |Green |Yellow blink|Yellow blink |
-|Green      |Yellow |Yellow blink|Yellow blink |
-|Yellow      |Red, Yellow |Yellow blink|Yellow blink |
-|Yellow      |Green |Yellow blink|Yellow blink |
-|Yellow      |Yellow |Yellow blink|Yellow blink |
-|Red, Yellow      |Red, Yellow |Yellow blink|Yellow blink |
-|Red, Yellow      |Green |Yellow blink|Yellow blink |
-|Red, Yellow      |Yellow |Yellow blink|Yellow blink |
-|Red      |Red, Yellow |Yellow blink|Yellow blink |
-|Red      |Green |Yellow blink|Yellow blink |
-|Red      |Yellow |Yellow blink|Yellow blink |
-|Yellow blink      |Red |Yellow blink|Yellow blink |
-|Yellow blink      |Red, Yellow |Yellow blink|Yellow blink |
-|Yellow blink      |Green |Yellow blink|Yellow blink |
-|Yellow blink      |Yellow |Yellow blink|Yellow blink |
+!|Scenario   |invalid combination|first light||second light|
+|first light |@first light                                 |
+|second light|@second light                                |
+|execute                                                   |
+|check       |first light        |Yellow blink             |
+|check       |second light       |Yellow blink             |
+
+!|script|FirstLightSwitchingCrossingController|
+
+!|invalid combination     |
+|first light |second light|
+|Green       |Red, Yellow |
+|Green       |Green       |
+|Green       |Yellow      |
+|Yellow      |Red, Yellow |
+|Yellow      |Green       |
+|Yellow      |Yellow      |
+|Red, Yellow |Red, Yellow |
+|Red, Yellow |Green       |
+|Red, Yellow |Yellow      |
+|Red         |Red, Yellow |
+|Red         |Green       |
+|Red         |Yellow      |
+|Yellow blink|Red         |
+|Yellow blink|Red, Yellow |
+|Yellow blink|Green       |
+|Yellow blink|Yellow      |
