@@ -14,4 +14,17 @@ namespace FitNesseIntegration
             return previousState.Next().NiceString();
         }
     }
+
+    public class FirstLightSwitchingCrossingControler : ColumnFixture
+    {
+        private LightState _firstLight;
+
+        public string FirstLight
+        {
+            get => _firstLight.Next().NiceString();
+            set => _firstLight = value.ParseToLightState();
+        }
+
+        public string SecondLight { get; set; }
+    }
 }
