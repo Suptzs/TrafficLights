@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.0.0
+MinimumVisualStudioVersion = 10.0.0.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitNesseIntegration", "Specification\FitNesseIntegration\FitNesseIntegration.csproj", "{23C71646-A9A0-419C-8484-0C4D2787FB86}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{1A7CE81E-CF6A-4769-8AE8-4671A34C284E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrafficLightsTests", "UnitTests\TrafficLightsTests\TrafficLightsTests.csproj", "{B1487754-EC50-4467-B4D2-FAB00A5AB0E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrafficLightsControlSystem", "TrafficLightsControlSystem\TrafficLightsControlSystem.csproj", "{5B5A6A76-5298-49EA-80AA-106DEDF6D0C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23C71646-A9A0-419C-8484-0C4D2787FB86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23C71646-A9A0-419C-8484-0C4D2787FB86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23C71646-A9A0-419C-8484-0C4D2787FB86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23C71646-A9A0-419C-8484-0C4D2787FB86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1487754-EC50-4467-B4D2-FAB00A5AB0E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1487754-EC50-4467-B4D2-FAB00A5AB0E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1487754-EC50-4467-B4D2-FAB00A5AB0E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1487754-EC50-4467-B4D2-FAB00A5AB0E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B5A6A76-5298-49EA-80AA-106DEDF6D0C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B5A6A76-5298-49EA-80AA-106DEDF6D0C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B5A6A76-5298-49EA-80AA-106DEDF6D0C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B5A6A76-5298-49EA-80AA-106DEDF6D0C5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B1487754-EC50-4467-B4D2-FAB00A5AB0E6} = {1A7CE81E-CF6A-4769-8AE8-4671A34C284E}
+	EndGlobalSection
+EndGlobal
