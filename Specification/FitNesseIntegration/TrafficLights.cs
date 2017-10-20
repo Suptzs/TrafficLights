@@ -15,7 +15,7 @@ namespace FitNesseIntegration
         }
     }
 
-    public class FirstLightSwitchingCrossingControler : ColumnFixture
+    public class FirstLightSwitchingCrossingController : ColumnFixture
     {
         private LightState _firstLight;
         private LightState _secondLight;
@@ -34,7 +34,24 @@ namespace FitNesseIntegration
 
         public override void Execute()
         {
+            if (!IsValidLightStateConfiguration())
+            {
+                WarningConfiguration();
+                return;
+            }
+            
             _firstLight = _firstLight.Next();
+        }
+
+        private void WarningConfiguration()
+        {
+            _firstLight = LightState.Unknown;
+            _secondLight = LightState.Unknown;
+        }
+
+        private bool IsValidLightStateConfiguration()
+        {
+            return _secondLight == LightState.Red && _firstLight != LightState.Unknown;
         }
     }
 }
