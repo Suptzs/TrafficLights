@@ -1,0 +1,12 @@
+---
+Suite
+---
+!1 Traffic Lights Control System
+
+This suite consists of a set of tests for the traffic lights control system.
+----
+!define COMMAND_PATTERN {%m -r fitnesse.fitserver.FitServer,dotnet2\fit.dll %p}
+!define TEST_RUNNER {dotnet2\Runner.exe}
+!path ${FITNESSE_ROOTPATH}\FitNesseIntegration\bin\Debug\FitNesseIntegration.dll
+----
+!contents -R2 -g -p -f -h

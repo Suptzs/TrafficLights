@@ -1,0 +1,10 @@
+---
+Test
+---
+!|Traffic Lights            |
+|Previous state|Next state? |
+|Red           |Red, Yellow |
+|Red, Yellow   |Green       |
+|Green         |Yellow      |
+|Yellow        |Red         |
+|invalid state |Yellow blink|
