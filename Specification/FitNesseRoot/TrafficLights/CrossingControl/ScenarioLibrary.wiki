@@ -1,0 +1,8 @@
+!|Scenario       |invalid combination|first light||second light|
+|set first light |@first light                                 |
+|set second light|@second light                                |
+|switch first light                                            |
+|check           |first light        |Yellow blink             |
+|check           |second light       |Yellow blink             |
+
+!contents -R2 -g -p -f -h

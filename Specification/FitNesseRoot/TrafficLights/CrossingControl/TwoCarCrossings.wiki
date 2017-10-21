@@ -12,15 +12,7 @@ Test
 
 !2 Invalid combinations
 
-!|Scenario   |invalid combination|first light||second light|
-|first light |@first light                                 |
-|second light|@second light                                |
-|execute                                                   |
-|check       |first light        |Yellow blink             |
-|check       |second light       |Yellow blink             |
-
 !|script|FirstLightSwitchingCrossingController|
-
 !|invalid combination     |
 |first light |second light|
 |Green       |Red, Yellow |

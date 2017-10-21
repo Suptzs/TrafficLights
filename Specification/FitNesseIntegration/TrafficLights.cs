@@ -34,12 +34,17 @@ namespace FitNesseIntegration
 
         public override void Execute()
         {
+            SwitchFirstLight();
+        }
+
+        private void SwitchFirstLight()
+        {
             if (!IsValidLightStateConfiguration())
             {
                 WarningConfiguration();
                 return;
             }
-            
+
             _firstLight = _firstLight.Next();
         }
 
