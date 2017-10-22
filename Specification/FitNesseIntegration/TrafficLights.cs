@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using fit;
 using TrafficLightsControlSystem;
 
@@ -19,6 +20,7 @@ namespace FitNesseIntegration
     {
         private LightState _firstLight;
         private LightState _secondLight;
+        private readonly CrossingValidator _validator = new CrossingValidator();
 
         public string FirstLight
         {
@@ -39,24 +41,22 @@ namespace FitNesseIntegration
 
         private void SwitchFirstLight()
         {
-            if (!IsValidLightStateConfiguration())
+            if (!_validator.IsValidConfiguration(_firstLight, _secondLight))
             {
                 WarningConfiguration();
                 return;
             }
 
             _firstLight = _firstLight.Next();
+            
+            if(!_validator.IsValidConfiguration(_firstLight, _secondLight))
+                WarningConfiguration();
         }
 
         private void WarningConfiguration()
         {
             _firstLight = LightState.Unknown;
             _secondLight = LightState.Unknown;
-        }
-
-        private bool IsValidLightStateConfiguration()
-        {
-            return _secondLight == LightState.Red && _firstLight != LightState.Unknown;
         }
     }
 }
